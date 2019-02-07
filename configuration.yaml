@@ -1,0 +1,136 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 39.714583
+  longitude: 116.336141
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Shanghai
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+http:
+  api_password: 0000ABCD
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+  - platform: waqi
+    token: 01e7a36f4fc582977c68e8fde4429880f40fc98e
+    locations:
+      - daxing,beijing
+
+weather:
+  - platform: darksky
+    api_key: fc453bd21319f538fc0ccc1e77157b8e
+    name: 天气
+    mode: daily
+
+# Text to speech
+tts:
+  - platform: google
+
+fan:
+  - platform: xiaomi_miio
+    name: Living room air purifier
+    host: 192.168.1.35
+    token: a36359456f7637275e224384293cfb5e
+    model: zhimi.airpurifier.m1
+  - platform: xiaomi_miio
+    name: North room air purifier
+    host: 192.168.1.17
+    token: 841a7b8271030d4249b8dbce528dcfdc
+    model: zhimi.airpurifier.v3
+
+climate:
+  - platform: xiaomi_miio
+    name: Bedroom AC
+    host: 192.168.1.50
+    token: cf37ce304f5522a9b5dbc8f45852129c
+    target_sensor: sensor.temperature_158d00020f250d
+    target_temp: 27
+  - platform: xiaomi_miio
+    name: Livingroom AC
+    host: 192.168.1.54
+    token: 4c626e27405c03062ec894f6b67e2587
+    target_sensor: sensor.temperature_158d00020f250d
+    target_temp: 27
+
+switch:
+  - platform: xiaomi_miio
+    name: AudioSystem
+    host: 192.168.1.57
+    token: 5431c5768060488247d93e8c11ad76cd
+    model: chuangmi.plug.v3
+
+xiaomi_aqara:
+  gateways:
+    - mac: 7811DCB2A247
+      host: 192.168.1.50
+      key: 656ABE6E46B54AED
+    - mac: 7811dcfa1b2b
+      host: 192.168.1.54
+      key: 8NN89X5420VTY7PT
+
+light:
+  - platform: xiaomi_miio
+    name: 南卧床头灯
+    host: 192.168.1.53
+    token: 6b35f2beb1a7e288b84acbfb4c0c157a
+
+# Cloud
+cloud:
+
+panel_iframe:
+  configurator:
+    title: 高级
+    icon: mdi:wrench
+    url: http://192.168.1.68:3218
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

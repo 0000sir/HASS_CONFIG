@@ -1,0 +1,107 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.wall_switch_158d00022eccdd",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "channel_0158d00022eccdd"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.humidity_158d00020f250d",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "humidity158d00020f250d"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.temperature_158d00020f250d",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "temperature158d00020f250d"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_7811dcb2a247",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "illumination7811dcb2a247"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "fan.ke_ting_kong_qi_jing_hua_qi",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "zhimi.airpurifier.m1-F0:B4:29:CA:30:F0"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "fan.bei_wo_shi_kong_qi_jing_hua_qi",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "zhimi.airpurifier.v3-64:09:80:27:6E:1B"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.yin_xiang",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "chuangmi.plug.v3-78:11:DC:5A:31:44"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.yin_xiang_usb",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "chuangmi.plug.v3-78:11:DC:5A:31:44-usb"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "light.nan_wo_chuang_tou_deng",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "philips.light.candle-78:11:DC:56:EE:69"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.bedroom_ac",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "lumi.acpartner.v3-78:11:DC:B2:A2:47"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.livingroom_ac",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "lumi.acpartner.v3-78:11:DC:FA:1B:2B"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

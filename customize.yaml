@@ -1,0 +1,13 @@
+switch.audiosystem:
+  friendly_name: 音箱
+  icon: mdi:speaker
+switch.wall_switch_158d00022eccdd:
+  friendly_name: 南卧室吊灯
+  icon: mdi:lightbulb-on-outline
+switch.audiosystem_usb:
+  friendly_name: USB电源
+  icon: mdi:usb
+sensor.humidity_158d00020f250d:
+  friendly_name: 湿度
+sensor.temperature_158d00020f250d:
+  friendly_name: 温度
