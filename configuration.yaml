@@ -26,7 +26,7 @@ config:
 # http:
 #   base_url: example.duckdns.org:8123
 http:
-  api_password: 0000ABCD
+  api_password: "0000!@#ABCD"
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -121,6 +121,14 @@ light:
     name: 南卧床头灯
     host: 192.168.1.53
     token: 6b35f2beb1a7e288b84acbfb4c0c157a
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.1.0/24
+    home_interval: 5
+    exclude:
+     - 192.168.1.1
+     - 192.168.1.68
 
 # Cloud
 cloud:
