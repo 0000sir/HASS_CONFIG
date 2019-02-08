@@ -15,6 +15,12 @@ homeassistant:
 
 system_health:
 
+logger:
+  default: warn
+  logs:
+    custom_components.climate.xiaomi_miio: debug
+    miio: debug
+
 # Show links to resources in log and frontend
 #introduction:
 
@@ -60,7 +66,6 @@ sun:
 # Sensors
 sensor:
   # Weather prediction
-  - platform: yr
   - platform: moon
   - platform: waqi
     token: 01e7a36f4fc582977c68e8fde4429880f40fc98e
@@ -171,15 +176,11 @@ device_tracker:
      - 192.168.1.37
      - 192.168.1.54
      - 192.168.1.19
-
-android_ip_webcam:
-  - host: 192.168.1.28
-    port: 8081
-    username: admin
-    password: admin
     
 # Cloud
 cloud:
+
+homekit:
 
 panel_iframe:
   configurator:

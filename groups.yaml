@@ -1,0 +1,20 @@
+outside:
+  entities:
+    - sun.sun
+    - sensor.caiyun_weather
+    - sensor.caiyun_temperature
+    - sensor.caiyun_humidity
+    - sensor.caiyun_cloud_rate
+    - sensor.caiyun_pressure
+    - sensor.caiyun_wind_direction
+    - sensor.caiyun_wind_speed
+    - sensor.caiyun_local_precipitation
+    - sensor.caiyun_nearest_precipitation
+    - sensor.caiyun_precipitation_distance
+    - sensor.caiyun_aqi
+    - sensor.caiyun_pm25
+    - sensor.caiyun_pm10
+    - sensor.caiyun_o3
+    - sensor.caiyun_co
+    - sensor.caiyun_no2
+    - sensor.caiyun_so2
