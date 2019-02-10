@@ -1,0 +1,5 @@
+aqara_add_device:
+  sequence:
+    - service: xiaomi_aqara.add_device
+      data:
+        gw_mac: 7811dcfa1b2b

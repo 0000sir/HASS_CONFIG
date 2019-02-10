@@ -50,3 +50,19 @@ sensor.caiyun_no2:
   friendly_name: 室外二氧化氮
 sensor.caiyun_so2:
   friendly_name: 室外二氧化硫
+switch.wall_switch_158d00020d74e9:
+  friendly_name: 北卧阳台灯
+  icon: mdi:lightbulb-on-outline
+switch.wall_switch_158d00022e90c0:
+  friendly_name: 北卧吊灯
+  icon: mdi:lightbulb-on-outline
+binary_sensor.water_leak_sensor_158d00023a6335:
+  friendly_name: 水浸传感器
+sensor.temperature_158d0002024629:
+  friendly_name: 北卧室温度
+sensor.humidity_158d0002024629:
+  friendly_name: 北卧室湿度
+sensor.illumination_7811dcfa1da9:
+  hidden: true
+sensor.illumination_7811dcb2a247:
+  hidden: true

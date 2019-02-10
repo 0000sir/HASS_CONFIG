@@ -66,7 +66,30 @@ sun:
 # Sensors
 sensor:
   # Weather prediction
-  - platform: moon
+  - platform: darksky
+    api_key: fc453bd21319f538fc0ccc1e77157b8e
+    forecast:
+      - 0
+      - 1
+      - 2
+      - 3
+    language: zh
+    monitored_conditions:
+      - summary
+      - icon
+      - temperature
+      - apparent_temperature
+      - wind_speed
+      - wind_gust
+      - wind_bearing
+      - cloud_cover
+      - humidity
+      - visibility
+      - daily_summary
+      - temperature_high
+      - temperature_low
+      - uv_index
+      - precip_probability
   - platform: waqi
     token: 01e7a36f4fc582977c68e8fde4429880f40fc98e
     locations:
@@ -130,6 +153,12 @@ climate:
     token: 4c626e27405c03062ec894f6b67e2587
     target_sensor: sensor.temperature_158d00020f250d
     target_temp: 27
+  - platform: xiaomi_miio
+    name: Northroom AC
+    host: 192.168.1.69
+    token: 34ac225360cefcb094de477e5f2c1283
+    target_sensor: sensor.temperature_158d0002024629
+    target_temp: 27
 
 switch:
   - platform: xiaomi_miio
@@ -146,12 +175,19 @@ xiaomi_aqara:
     - mac: 7811dcfa1b2b
       host: 192.168.1.54
       key: 8NN89X5420VTY7PT
+    - mac: 7811DCFA1DA9
+      host: 192.168.1.69
+      key: q54ht9iofwze025x
 
 light:
   - platform: xiaomi_miio
     name: 南卧床头灯
     host: 192.168.1.53
     token: 6b35f2beb1a7e288b84acbfb4c0c157a
+  - platform: xiaomi_miio
+    name: WorkLight
+    host: 192.168.1.52
+    token: 16292e019d6b1d1e9a18756f34756831
 
 device_tracker:
   - platform: nmap_tracker
@@ -187,6 +223,10 @@ panel_iframe:
     title: 高级
     icon: mdi:wrench
     url: http://192.168.1.68:3218
+
+hello_miai:
+  miid: 13301195533
+  password: 0000nacta
 
 group: !include groups.yaml
 automation: !include automations.yaml
